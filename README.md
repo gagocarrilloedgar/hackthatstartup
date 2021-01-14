@@ -1,5 +1,7 @@
 # Hack that startup
 
+![banner](1609803042058.jpeg)
+
 Tenemos el placer de presentaros el primer evento de [Nuwe](https://nuwe.io) en colaboración con la aceleradora de startups [Demium](https://demium.com/). Este evento consistirá en una hackathon que tendrá lugar entre el 22 y el 24 de enero y que será on-line. En dicha hackathon los usuarios deberán desarrollar diferentes pruebas tanto individuales como por equipos con el objetivo de sumar el máximo de puntos posibles. 
 
 Las pruebas individuales se producirán principalmente durante el día 23 y las grupales durante el día 24. El viernes 22 presentaremos el evento mediante una reunión inicial con el objetivo de explicar cómo sucederá todo, resolver cualquier duda y que nos podamos conocer todos un poco mejor. Los problemas planteados estarán relacionados con el Data Science y el Desarrollo Web, al inicio del evento daremos a escoger a cada participante entre una de las dos modalidades y todas las pruebas se tendrán que llevar a cabo siguiendo la especialidad escogida.
