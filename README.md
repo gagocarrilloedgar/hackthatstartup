@@ -27,7 +27,7 @@ Como en toda hackathon tiene que haber premios y por eso en esta tenemos los sig
 
 ### Oportunidades profesionales
 
-Todos los que estéis buscando trabajo tendréis la oportunidads si os interesa que la siguiente lista de empresa le eche un ojo a vuestro perfil  y vea el increíble trabajo que habéis hecho durante solo unas pocas horas.
+Todos los que estéis buscando trabajo tendréis la oportunidades si os interesa que la siguiente lista de empresa le eche un ojo a vuestro perfil  y vea el increíble trabajo que habéis hecho durante solo unas pocas horas.
 
 - [Indomit](https://www.indomit.io/) : en búsqueda de perfil full stack (mid-senior) con PHP(Laravel)
 - [Textilu](https://llama-oval-l9ft.squarespace.com/): perfil full stack más orientado al backend con dominio de PHP
