@@ -8,7 +8,7 @@ El premio será un cheque regalo de Amazon además de la oportunidad de conocer 
 
 Ahora la pregunta que te hacemos es: ¿te atreves a ponerte en el foco de las startups? Podéis registraros en el evento a través de nuestra nueva web, ¿a qué esperáis?
 
-## Premios 
+### Premios 
 
 Como en toda hackathon tiene que haber premios y por eso en esta tenemos los siguientes premio y oportunidades:
 
@@ -17,8 +17,13 @@ Como en toda hackathon tiene que haber premios y por eso en esta tenemos los sig
 - Meción de certificación a los 3 mejores tanto de Data Science como de Web development
 - Certificación de participación validando los proyectos y skills utilizadas durante el proyecto (todos)
 
+**En proceso**
 
-**Oportunidades profesionales**
+- Insígnia de certificación en linkedin para validación de las habilidades del hackathon
+- Posibles perks o artículos a segundos y terceros puestos (no seguro)
+
+
+### Oportunidades profesionales
 
 Todos los que estéis buscando trabajo tendréis la oportunidads si os interesa que la siguiente lista de empresa le eche un ojo a vuestro perfil  y vea el increíble trabajo que habéis hecho durante solo unas pocas horas.
 
@@ -28,10 +33,6 @@ Todos los que estéis buscando trabajo tendréis la oportunidads si os interesa 
 - [Demium BCN](https://demium.com/): perfiles tech emprendedores
 
 
-**En proceso**
-
-- Insígnia de certificación en linkedin para validación de las habilidades del hackathon
-- Posibles perks o artículos a segundos y terceros puestos (no seguro)
-
+¿Y qué haremos después con vuestros perfiles? Al tener los resultados de vuestras pruebas, todos aquellos interesados o abiertos a conectar con empresas se quedarán en nuestra base de datos y las futuras empresas con las que estamos en contacto podrán contactar con vosotros para ofreceros puesto que tengan relación con vuestro perfil e intereses.
 
 
