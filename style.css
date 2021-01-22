@@ -71,17 +71,16 @@ body {
     background-color: whitesmoke;
     border-radius: 10px;
     display: grid;
-    padding: 10px;
+    padding: 5px;
     grid-template-columns: auto auto auto auto;
-    margin: 30px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .imgcompany {
-    padding: 10px;
+    padding: 5px;
     width: 200px;
-    margin: 10px;
+    margin: 5px;
 }
 
 .infomality {
