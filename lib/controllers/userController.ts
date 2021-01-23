@@ -74,7 +74,7 @@ export class UserController {
 
     public get_user(req: Request, res: Response) {
         if (req.params.id) {
-            const user_filter = { _id: req.params.id };
+            const user_filter = { _id: req.params.id, is_deleted: false };
             this.user_service.filterUser(user_filter, (err: any, user_data: IUser) => {
                 if (err) {
                     mongoError(err, res);
@@ -88,7 +88,7 @@ export class UserController {
     }
 
     public get_all_users(req: Request, res: Response) {
-        const user_filter = {};
+        const user_filter = { is_deleted: false };
         const users_data = this.user_service.getAllUsers(user_filter, (err: any, user_data: IUser) => {
             if (err) {
                 mongoError(err, res);
@@ -146,13 +146,18 @@ export class UserController {
 
     public delete_user(req: Request, res: Response) {
         if (req.params.id) {
-            this.user_service.deleteUser(req.params.id, (err: any, delete_details: { deletedCount: number; }) => {
+            const userFilter = { _id: req.params.id };
+            this.user_service.filterUser(userFilter, (err: any, user_data: IUser) => {
                 if (err) {
                     mongoError(err, res);
-                } else if (delete_details.deletedCount !== 0) {
-                    successResponse('delete user successfull', null, res);
-                } else {
-                    failureResponse('invalid user', null, res);
+                } else if (user_data && user_data.is_deleted !== true) {
+                    this.user_service.deleteUser(req.params.id, (err: any) => {
+                        if (err) {
+                            mongoError(err, res);
+                        } else {
+                            successResponse('User deleted sucessfully', null, res);
+                        }
+                    });
                 }
             });
         } else {
