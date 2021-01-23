@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "af857508-821f-48ae-827b-6d9e41768faa",
-		"name": "Hackathon",
+		"_postman_id": "8158c5d8-caf8-4761-b2c0-2faab7017f5c",
+		"name": "Hackathon - Heroku",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -19,15 +19,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"Mirko\",\n    \"email\": \"mirko.siddi@gmail.com\",\n    \"password\": \"123\",\n    \"firstName\": \"Mirko\",\n    \"lastName\": \"Siddi\",\n    \"jobs\": [],\n    \"studies\": []\n}"
+					"raw": "{\n    \"username\": \"Mirko\",\n    \"email\": \"mirko.siddi@gmail.com\",\n    \"password\": \"Hackathon2021!\",\n    \"firstName\": \"Mirko\",\n    \"lastName\": \"Siddi\",\n    \"jobs\": [],\n    \"studies\": []\n}"
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/auth/signup",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/auth/signup",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"auth",
 						"signup"
@@ -50,15 +51,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"mirko.siddi@gmail.com\",\n    \"password\": \"123\"\n}"
+					"raw": "{\n    \"email\": \"mirko.siddi@gmail.com\",\n    \"password\": \"Hackathon2021!\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/auth/login",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/auth/login",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"auth",
 						"login"
@@ -87,12 +89,13 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/auth/logout",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/auth/logout",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"auth",
 						"logout"
@@ -114,12 +117,13 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:{{port}}/auth/me",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/auth/me",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"auth",
 						"me"
@@ -135,12 +139,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/auth/all",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/auth/all",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"auth",
 						"all"
@@ -162,18 +167,19 @@
 					"urlencoded": [
 						{
 							"key": "userId",
-							"value": "600c32119ed5010e219844e5",
+							"value": "600c52bfd17a670015f87acd",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/user/jobs",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/user/jobs",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"user",
 						"jobs"
@@ -195,18 +201,19 @@
 					"urlencoded": [
 						{
 							"key": "userId",
-							"value": "600c2c0ffb94670ce583ee04",
+							"value": "600c52bfd17a670015f87acd",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/user/studies",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/user/studies",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"user",
 						"studies"
@@ -222,7 +229,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Full stack developer\",\n    \"type\": \"Short term\",\n    \"company\": \"Amazon\",\n    \"location\": \"Barcelona\",\n    \"current\": false,\n    \"headline\": \"Project manager for a big tech Company\",\n    \"description\": \"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c2c0ffb94670ce583ee04\"\n}",
+					"raw": "{\n    \"title\": \"Full stack developer\",\n    \"type\": \"Short term\",\n    \"company\": \"Amazon\",\n    \"location\": \"Barcelona\",\n    \"current\": false,\n    \"headline\": \"Project manager for a big tech Company\",\n    \"description\": \"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c52bfd17a670015f87acd\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -230,12 +237,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/user/jobs",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/user/jobs",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"user",
 						"jobs"
@@ -251,7 +259,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"school\": \"Liceo scientifico Lorenzo Mossa\",\n    \"degree\": \"Maturitá scientifica\",\n    \"fieldOfStudy\": \"Science\",\n    \"grade\": \"Superior\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c2c0ffb94670ce583ee04\"\n}",
+					"raw": "{\n    \"school\": \"Liceo scientifico Lorenzo Mossa\",\n    \"degree\": \"Maturitá scientifica\",\n    \"fieldOfStudy\": \"Science\",\n    \"grade\": \"Superior\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c52bfd17a670015f87acd\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -259,12 +267,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/user/studies",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/user/studies",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"user",
 						"studies"
@@ -280,7 +289,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"school\": \"Liceo scientifico Lorenzo Mossa - Olbia\",\n    \"degree\": \"Maturitá scientifica\",\n    \"fieldOfStudy\": \"Science\",\n    \"grade\": \"Superior\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c2c0ffb94670ce583ee04\",\n    \"studyId\": \"600c4053b3b6af0ef35e80b9\"\n}",
+					"raw": "{\n    \"school\": \"Liceo scientifico Lorenzo Mossa - Olbia\",\n    \"degree\": \"Maturitá scientifica\",\n    \"fieldOfStudy\": \"Science\",\n    \"grade\": \"Superior\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c52bfd17a670015f87acd\",\n    \"studyId\": \"600c5436d17a670015f87ad0\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -288,12 +297,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/user/studies",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/user/studies",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"user",
 						"studies"
@@ -309,7 +319,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Full stack developer Senior\",\n    \"type\": \"Short term\",\n    \"company\": \"Amazon\",\n    \"location\": \"Barcelona\",\n    \"current\": false,\n    \"headline\": \"Project manager for a big tech Company\",\n    \"description\": \"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c2c0ffb94670ce583ee04\",\n    \"jobId\": \"600c2e9fee268f0d8ef033fd\"\n}",
+					"raw": "{\n    \"title\": \"Full stack developer Senior\",\n    \"type\": \"Short term\",\n    \"company\": \"Amazon\",\n    \"location\": \"Barcelona\",\n    \"current\": false,\n    \"headline\": \"Project manager for a big tech Company\",\n    \"description\": \"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c52bfd17a670015f87acd\",\n    \"jobId\": \"600c5352d17a670015f87ace\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -317,12 +327,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/user/jobs",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/user/jobs",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"user",
 						"jobs"
@@ -338,7 +349,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userId\": \"600c2c0ffb94670ce583ee04\",\n    \"jobId\": \"600c2d68fb94670ce583ee09\"\n}",
+					"raw": "{\n    \"userId\": \"600c52bfd17a670015f87acd\",\n    \"jobId\": \"600c5352d17a670015f87ace\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -346,12 +357,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/user/jobs",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/user/jobs",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"user",
 						"jobs"
@@ -367,7 +379,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userId\": \"600c2c0ffb94670ce583ee04\",\n    \"studyId\": \"600c4020b3b6af0ef35e80b8\"\n}",
+					"raw": "{\n    \"userId\": \"600c52bfd17a670015f87acd\",\n    \"studyId\": \"600c5436d17a670015f87ad0\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -375,12 +387,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/user/studies",
-					"protocol": "http",
+					"raw": "https://hackthon-nuwe.herokuapp.com/user/studies",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"hackthon-nuwe",
+						"herokuapp",
+						"com"
 					],
-					"port": "{{port}}",
 					"path": [
 						"user",
 						"studies"
@@ -414,6 +427,10 @@
 		{
 			"key": "port",
 			"value": "5000"
+		},
+		{
+			"key": "host",
+			"value": "hackthon-nuwe.herokuapp.com"
 		}
 	]
 }

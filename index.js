@@ -66,6 +66,11 @@ app.get("/", (req, res, next) => {
 app.use("/auth", authRouter);
 app.use("/user", userRouter);
 
+app.use((req, res, next) => {
+  console.log("No matching request :>> ");
+  res.sendFile(__dirname + "/public/index.html");
+});
+
 // ERROR HANDLING
 app.use((req, res, next) => {
   console.log("404");
