@@ -30,7 +30,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000", "http://localhost", "http://127.0.0.1"],
+    origin: [],
   })
 );
 
@@ -58,13 +58,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 // ROUTER
+app.get("/", (req, res, next) => {
+  console.log("Server is up and running");
+  res.send("Server is up and running");
+});
+
 app.use("/auth", authRouter);
 app.use("/user", userRouter);
-
-app.use((req, res, next) => {
-  console.log("No matching request :>> ");
-  res.sendFile(__dirname + "/public/index.html");
-});
 
 // ERROR HANDLING
 app.use((req, res, next) => {

@@ -7,11 +7,6 @@ const User = require("../models/user.model");
 
 const { isLoggedIn, isNotLoggedIn } = require("../helpers/middlewares");
 
-router.get("/", (req, res) => {
-  console.log("Server is up and running");
-  res.send("Server is up and running");
-});
-
 /// JOBS ////
 router.get("/jobs", (req, res, next) => {
   console.log("Getting user's Jobs");
