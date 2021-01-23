@@ -12,7 +12,7 @@ export class UserController {
     public create_user(req: Request, res: Response) {
         var academyRecord = [];
         var employmentRecord = [];
-        
+
         //here I check if inside the academic history array the user is missing some field 
         req.body.academic_history.forEach((academicRecord: any) => {
 
@@ -39,7 +39,6 @@ export class UserController {
             req.body.social_links &&
             (academyRecord.length != 0 && academyRecord !== undefined)) {
 
-            const checkEmploymentHistory = req.body.employment_history;
             const user_params: IUser = {
                 name: {
                     first_name: req.body.name.first_name,
@@ -97,52 +96,61 @@ export class UserController {
             }
         });
     }
-    /*
-        public update_user(req: Request, res: Response) {
-            if (req.params.id &&
-                req.body.name || req.body.name.first_name || req.body.name.middle_name || req.body.name.last_name ||
-                req.body.birth_date || req.body.email ||
-                req.body.phone_number || req.body.social_links ||
-                req.body.academic_history || req.body.employment_history) {
-                const user_filter = { _id: req.params.id };
-                this.user_service.filterUser(user_filter, (err: any, user_data: IUser) => {
-                    if (err) {
-                        mongoError(err, res);
-                    } else if (user_data) {
-                        user_data.modification_notes.push({
-                            modified_on: new Date(Date.now()),
-                            modified_by: req.body.name,
-                            modification_note: 'User data updated'
-                        });
-                        const user_params: IUser = {
-                            _id: req.params.id,
-                            name: req.body.name ? {
-                                first_name: req.body.name.first_name ? req.body.name.first_name : user_data.name.first_name,
-                                middle_name: req.body.name.middle_name ? req.body.name.middle_name : user_data.name.middle_name,
-                                last_name: req.body.name.last_name ? req.body.name.last_name : user_data.name.last_name
-                            } : user_data.name,
-                            birth_date: req.body.birth_date ? req.body.birth_date : user_data.birth_date,
-                            email: req.body.email ? req.body.email : user_data.email,
-                            phone_number: req.body.phone_number ? req.body.phone_number : user_data.phone_number,
-                            is_deleted: req.body.is_deleted ? req.body.is_deleted : user_data.is_deleted,
-                            modification_notes: user_data.modification_notes
-                        };
-                        this.user_service.updateUser(user_params, (err: any) => {
-                            if (err) {
-                                mongoError(err, res);
-                            } else {
-                                successResponse('update user successfull', null, res);
-                            }
-                        });
-                    } else {
-                        failureResponse('invalid user', null, res);
-                    }
-                });
-            } else {
-                insufficientParameters(res);
-            }
+
+    public update_basic_user_info(req: Request, res: Response) {
+        if (req.params.id &&
+            req.body.name || req.body.name.first_name || req.body.name.middle_name || req.body.name.last_name ||
+            req.body.birth_date || req.body.email ||
+            req.body.phone_number || req.body.social_links) {
+            const user_filter = { _id: req.params.id, is_deleted: false };
+            this.user_service.filterUser(user_filter, (err: any, user_data: IUser) => {
+                if (err) {
+                    mongoError(err, res);
+                } else if (user_data) {
+                    user_data.modification_notes.push({
+                        modified_on: new Date(Date.now()),
+                        modified_by: req.body.name.first_name,
+                        modification_note: 'User data updated'
+                    });
+                    const user_params: IUser = {
+                        _id: req.params.id,
+                        name: req.body.name ? {
+                            first_name: req.body.name.first_name ? req.body.name.first_name : user_data.name.first_name,
+                            middle_name: req.body.name.middle_name ? req.body.name.middle_name : user_data.name.middle_name,
+                            last_name: req.body.name.last_name ? req.body.name.last_name : user_data.name.last_name
+                        } : user_data.name,
+                        birth_date: req.body.birth_date ? req.body.birth_date : user_data.birth_date,
+                        email: req.body.email ? req.body.email : user_data.email,
+                        phone_number: req.body.phone_number ? req.body.phone_number : user_data.phone_number,
+                        social_links: req.body.social_links ? req.body.social_links : user_data.social_links,
+                        academic_history: user_data.academic_history,
+                        employment_history: user_data.employment_history,
+                        is_deleted: req.body.is_deleted ? req.body.is_deleted : user_data.is_deleted,
+                        modification_notes: user_data.modification_notes
+                    };
+                    this.user_service.updateBasicUserInfo(user_params, (err: any) => {
+                        if (err) {
+                            mongoError(err, res);
+                        } else {
+                            successResponse('update user info successfull', null, res);
+                        }
+                    });
+                } else {
+                    failureResponse('invalid user', null, res);
+                }
+            });
+        } else {
+            insufficientParameters(res);
         }
-        */
+    }
+
+
+    public update_academy_history(req: Request, res: Response) {
+
+    }
+    public update_work_history(req: Request, res: Response) {
+
+    }
 
     public delete_user(req: Request, res: Response) {
         if (req.params.id) {

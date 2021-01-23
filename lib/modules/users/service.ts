@@ -16,7 +16,7 @@ export default class UserService {
         users.find(query, callback);
     }
 
-    public updateUser(user_params: IUser, callback: any) {
+    public updateBasicUserInfo(user_params: IUser, callback: any) {
         const query = { _id: user_params._id };
         users.findOneAndUpdate(query, user_params, callback);
     }

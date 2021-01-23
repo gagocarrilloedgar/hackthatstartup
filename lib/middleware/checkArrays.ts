@@ -25,3 +25,10 @@ export const isAllFieldsInsideEmploymentHistoryCorrect = (
 }
 
 
+export const checkFieldsInsideAcademicHistoryForUpdate = (academicData: any) => {
+    
+}
+
+export const checkFieldsInsideWorkHistoryForUpdate = (academicData: any) => {
+    
+}
