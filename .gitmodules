@@ -1,0 +1,6 @@
+[submodule "hackthatstartup-back"]
+	path = hackthatstartup-back
+	url = https://github.com/markhacksanjuan/hackthatstartup-back.git
+[submodule "BACK/hackthatstartup-back"]
+	path = BACK/hackthatstartup-back
+	url = https://github.com/markhacksanjuan/hackthatstartup-back.git
