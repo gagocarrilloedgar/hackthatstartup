@@ -172,12 +172,12 @@ export class UserController {
         }
     }
     public update_work_history(req: Request, res: Response) {
-
+        //pending
     }
 
     public delete_user(req: Request, res: Response) {
         if (req.params.id) {
-            const userFilter = { _id: req.params.id };
+            const userFilter = { _id: req.params.id, is_deleted: false };
             this.user_service.filterUser(userFilter, (err: any, user_data: IUser) => {
                 if (err) {
                     mongoError(err, res);
