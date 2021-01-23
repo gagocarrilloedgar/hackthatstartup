@@ -8,8 +8,8 @@ const userSchema = new Schema(
     password: String,
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
-    jobs: [{ type: Schema.Types.ObjectId, ref: "Job" }],
-    studies: [{ type: Schema.Types.ObjectId, ref: "Study" }],
+    jobs: [{ type: Schema.Types.ObjectId, ref: "Job", default: [] }],
+    studies: [{ type: Schema.Types.ObjectId, ref: "Study", default: [] }],
   },
   {
     timestamps: true,

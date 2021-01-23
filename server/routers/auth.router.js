@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const createError = require("http-errors");
 const bcrypt = require("bcrypt");
+const passwordStrength = require("check-password-strength");
+
 const saltRounds = 10;
 const User = require("../models/user.model");
 
@@ -33,28 +35,31 @@ router.post("/signup", isNotLoggedIn, (req, res, next) => {
         return next(createError(400)); // Bad Request
       } else {
         const salt = bcrypt.genSaltSync(saltRounds);
-        const encryptedPassword = bcrypt.hashSync(password, salt);
-
-        User.create({
-          username,
-          email,
-          password: encryptedPassword,
-          firstName,
-          lastName,
-          jobs: [],
-          studies: [],
-        })
-          .then((createdUser) => {
-            createdUser.password = "*";
-            req.session.currentUser = createdUser;
-
-            res
-              .status(201) // Created
-              .json(createdUser); // res.send()
+        if (passwordStrength(password).value === "Weak") {
+          next(createError("Weak Password"));
+        } else {
+          const encryptedPassword = bcrypt.hashSync(password, salt);
+          User.create({
+            username,
+            email,
+            password: encryptedPassword,
+            firstName,
+            lastName,
+            jobs: [],
+            studies: [],
           })
-          .catch((err) => {
-            next(createError(err));
-          });
+            .then((createdUser) => {
+              createdUser.password = "*";
+              req.session.currentUser = createdUser;
+
+              res
+                .status(201) // Created
+                .json(createdUser); // res.send the user created
+            })
+            .catch((err) => {
+              next(createError(err));
+            });
+        }
       }
     })
     .catch((err) => {

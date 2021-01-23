@@ -9,7 +9,7 @@ const studiesSchema = new Schema(
     grade: { type: String, required: true },
     startDateM: { type: Number, required: true },
     startDateY: { type: Number, required: true },
-    user: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    userId: { type: Schema.Types.ObjectId, ref: "User" },
   },
   {
     timestamps: true,
