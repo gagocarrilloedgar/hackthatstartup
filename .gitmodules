@@ -4,3 +4,6 @@
 [submodule "BACK/hackthatstartup-back"]
 	path = BACK/hackthatstartup-back
 	url = https://github.com/markhacksanjuan/hackthatstartup-back.git
+[submodule "FRONT/hackthatstartup-front"]
+	path = FRONT/hackthatstartup-front
+	url = https://github.com/markhacksanjuan/hackthatstartup-front.git
