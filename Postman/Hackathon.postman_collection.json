@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "af857508-821f-48ae-827b-6d9e41768faa",
+		"name": "Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Mirko\",\n    \"email\": \"mirko.siddi@gmail.com\",\n    \"password\": \"123\",\n    \"firstName\": \"Mirko\",\n    \"lastName\": \"Siddi\",\n    \"jobs\": [],\n    \"studies\": []\n}"
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mirko.siddi@gmail.com\",\n    \"password\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/auth/logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/auth/me",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:{{port}}/auth/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"auth",
+						"me"
+					]
+				},
+				"description": "Get the user object"
+			},
+			"response": []
+		},
+		{
+			"name": "/auth/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/auth/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"auth",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/jobs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "600c32119ed5010e219844e5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/user/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/studies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "600c2c0ffb94670ce583ee04",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/user/studies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user",
+						"studies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/jobs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Full stack developer\",\n    \"type\": \"Short term\",\n    \"company\": \"Amazon\",\n    \"location\": \"Barcelona\",\n    \"current\": false,\n    \"headline\": \"Project manager for a big tech Company\",\n    \"description\": \"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c2c0ffb94670ce583ee04\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/user/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/studies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"school\": \"Liceo scientifico Lorenzo Mossa\",\n    \"degree\": \"Maturitá scientifica\",\n    \"fieldOfStudy\": \"Science\",\n    \"grade\": \"Superior\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c2c0ffb94670ce583ee04\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/user/studies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user",
+						"studies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/studies",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"school\": \"Liceo scientifico Lorenzo Mossa - Olbia\",\n    \"degree\": \"Maturitá scientifica\",\n    \"fieldOfStudy\": \"Science\",\n    \"grade\": \"Superior\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c2c0ffb94670ce583ee04\",\n    \"studyId\": \"600c4053b3b6af0ef35e80b9\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/user/studies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user",
+						"studies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/jobs",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Full stack developer Senior\",\n    \"type\": \"Short term\",\n    \"company\": \"Amazon\",\n    \"location\": \"Barcelona\",\n    \"current\": false,\n    \"headline\": \"Project manager for a big tech Company\",\n    \"description\": \"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores\",\n    \"startDateM\": 10,\n    \"startDateY\": 2020,\n    \"userId\": \"600c2c0ffb94670ce583ee04\",\n    \"jobId\": \"600c2e9fee268f0d8ef033fd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/user/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/jobs",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"600c2c0ffb94670ce583ee04\",\n    \"jobId\": \"600c2d68fb94670ce583ee09\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/user/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/studies",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"600c2c0ffb94670ce583ee04\",\n    \"studyId\": \"600c4020b3b6af0ef35e80b8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/user/studies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user",
+						"studies"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "5000"
+		}
+	]
+}
