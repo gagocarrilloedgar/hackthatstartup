@@ -146,7 +146,30 @@ export class UserController {
 
 
     public update_academy_history(req: Request, res: Response) {
-
+        if (req.params.studyId && req.params.id) {
+            console.log('controller ' +  req.params.id)
+            const academyRecordFilter = { _id: req.params.id };
+            this.user_service.filterUser(academyRecordFilter, (err:any, academyData: any) => {
+                const academyRecordParams = {
+                    _id: req.params.studyId,
+                    id_user: req.params.id,
+                    id_study: req.params.id_study,
+                    study_field: req.body.study_field ? req.body.study_field : academyData.study_field,
+                    center_name: req.body.center_name ? req.body.center_name : academyData.center_name,
+                    center_location: req.body.center_location ? req.body.center_location : academyData.center_location,
+                    started_on: req.body.started_on ? req.body.started_on : academyData.started_on,
+                    ended_on: req.body.ended_on ? req.body.ended_on : academyData.ended_on,
+                    is_deleted: false
+                };
+                this.user_service.updateAcademyHistory(academyRecordParams, (err: any) => {
+                    if (err) {
+                        mongoError(err, res);
+                    } else {
+                        successResponse('update academy record info successfull', academyData, res);
+                    }
+                });
+            });
+        }
     }
     public update_work_history(req: Request, res: Response) {
 

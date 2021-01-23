@@ -22,6 +22,10 @@ export class UserRoutes {
         app.put('/api/user/updateBasicInfo/:id', (req: Request, res: Response) => {
             this.user_controller.update_basic_user_info(req, res);
         });
+
+        app.put('/api/user/updateAcademyData/:id/:studyId', (req: Request, res: Response) => {
+            this.user_controller.update_academy_history(req, res);
+        });
         
         app.put('/api/user/delete/:id', (req: Request, res: Response) => {
             this.user_controller.delete_user(req, res);
