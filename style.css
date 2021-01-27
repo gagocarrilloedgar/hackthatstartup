@@ -93,6 +93,13 @@ body {
     background-color: rgb(44, 44, 44);
 }
 
+.people {
+    display: grid;
+    padding: 10px;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
 .stack-grid {
     display: grid;
     padding: 10px;
@@ -111,6 +118,17 @@ body {
 
 .colum4 {
     grid-template-columns: auto auto auto auto;
+}
+
+/*BODY TABLET*/
+
+@media only screen and (max-width: 1100px) {
+    .people {
+        display: grid;
+        padding: 10px;
+        justify-content: space-evenly;
+        grid-template-columns: auto auto auto auto;
+    }
 }
 
 /*BODY MOBILE*/
@@ -153,7 +171,6 @@ body {
         grid-template-columns: auto auto auto auto;
         margin: 10px;
         justify-content: space-evenly;
-
     }
     .imgcompany {
         padding: 5px;
@@ -166,7 +183,6 @@ body {
     .cal {
         padding: 5px;
     }
-
     .stack-grid {
         display: grid;
         padding: 5px;
@@ -180,6 +196,12 @@ body {
         height: 50px;
     }
     .colum4 {
+        grid-template-columns: auto auto auto;
+    }
+    .people {
+        display: grid;
+        padding: 10px;
+        justify-content: space-evenly;
         grid-template-columns: auto auto auto;
     }
 }
