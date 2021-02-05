@@ -1,4 +1,9 @@
-# Hack that startup
+# Reto_Back_Illya_Gordus
+
+# Testing con postman de las rutas funcionales: https://www.getpostman.com/collections/b587934828c17b56c30a
+
+### Problemas: 
+**No he logrado acabar a tiempo los metodos encargados de modificar el historial de trabajo y los estudios, he dejado los endpoints funcionales en el link de arriba**
 
 ![banner](/Assets/banner.jpeg)
 
